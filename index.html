@@ -17,14 +17,14 @@
     <meta property="og:url" content="https://leslieaguilamontiel.vercel.app/" />
     <meta property="og:title" content="Leslie Aguila Montiel - Profesional" />
     <meta property="og:description" content="Profesional con experiencia en gestión administrativa, capacitación y planeación institucional, orientada a resultados y a la mejora continua en organizaciones de seguridad y protección ciudadana." />
-    <meta property="og:image" content="https://leslieaguilamontiel.vercel.app/img/header.png" />
+    <meta property="og:image" content="https://leslieaguilamontiel.vercel.app/img/miniatura.png" />
 
     <!-- X (Twitter) -->
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:url" content="https://leslieaguilamontiel.vercel.app/" />
     <meta property="twitter:title" content="Leslie Aguila Montiel - Profesional" />
     <meta property="twitter:description" content="Profesional con experiencia en gestión administrativa, capacitación y planeación institucional, orientada a resultados y a la mejora continua en organizaciones de seguridad y protección ciudadana." />
-    <meta property="twitter:image" content="https://leslieaguilamontiel.vercel.app/img/header.png" />
+    <meta property="twitter:image" content="https://leslieaguilamontiel.vercel.app/img/miniatura.png" />
 
 
     <!-- Meta Tags Generated with https://metatags.io -->
@@ -162,7 +162,7 @@
         /* ---   HEADER    --- */
         /* ------------------- */
         .header {
-            background-color: var(--color-white);
+            background-color: transparent;
             padding: 80px 0;
             text-align: center;
         }
@@ -197,6 +197,15 @@
             margin: 0 auto 25px auto;
             color: #7f8c8d;
         }
+        
+        /* New styling for the button group */
+        .button-group {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap; /* Allows buttons to wrap on smaller screens */
+            gap: 15px;
+            margin-top: 25px;
+        }
 
         .btn {
             display: inline-block;
@@ -209,12 +218,28 @@
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             letter-spacing: 0.5px;
         }
+        
+        /* New button color for contrast */
+        .btn.secondary {
+            background-color: transparent;
+            border: 2px solid var(--color-primary);
+            color: var(--color-primary);
+            box-shadow: none;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
 
         .btn:hover {
             transform: translateY(-5px);
             box-shadow: 0 10px 25px rgba(26, 188, 156, 0.4);
         }
         
+        /* Hover effect for secondary button */
+        .btn.secondary:hover {
+            background-color: var(--color-primary);
+            color: var(--color-white);
+            box-shadow: 0 10px 25px rgba(44, 62, 80, 0.4);
+        }
+
         .btn i {
             margin-right: 10px;
         }
@@ -420,6 +445,11 @@
             h2 { font-size: 1.8rem; }
             section { padding: 50px 0; }
             .header { padding: 60px 0; }
+            
+            .button-group {
+                flex-direction: column;
+                align-items: center;
+            }
 
             .header-content {
                 flex-direction: column;
@@ -474,9 +504,12 @@
                 <div class="header-text">
                     <h1>Leslie Aguila Montiel</h1>
                     <p class="subtitle">Profesional con experiencia en gestión administrativa, capacitación y planeación institucional, orientada a resultados y a la mejora continua en organizaciones de seguridad y protección ciudadana.</p>
-                    <a href="https://wa.me/5212212023768" 
-                    target="_blank" 
-                    rel="noopener noreferrer" class="btn"><i class="fas fa-download"></i>Contactar por WhatsApp</a>
+                    <div class="button-group">
+                        <a href="https://wa.me/5212212023768" 
+                        target="_blank" 
+                        rel="noopener noreferrer" class="btn"><i class="fab fa-whatsapp"></i>Contactar por WhatsApp</a>
+                        <a href="./files/CVLeslieAguilaMontiel.pdf" target="_blank" rel="noopener noreferrer" class="btn secondary"><i class="fas fa-file-pdf"></i>Descargar CV</a>
+                    </div>
                 </div>
             </div>
         </div>
